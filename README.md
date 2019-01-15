@@ -1,16 +1,11 @@
-<img src='imgs/CovaMNet.bmp' align="center" width=500>
-
-<br><br><br>
-
 # CovaMNet in PyTorch
 
-We provide PyTorch implementation of CovaMNet for few-shot learning.
+We provide PyTorch implementation of CovaMNet for few-shot learning.<br>
+The code was written by [Wenbin Li](https://github.com/WenbinLee)<a href="https://cs.nju.edu.cn/rl/people/liwb/index.htm"> [Homepage]</a>.<br>
 
-The code was written by [Wenbin Li](https://github.com/WenbinLee) <p><a href="https://cs.nju.edu.cn/rl/people/liwb/index.htm"> [Homepage]</a>.
-
-If you use this code for your research, please cite:
-Distribution Consistency based Covariance Metric Networks for Few-shot Learning.<br>
-[Wenbin Li](https://cs.nju.edu.cn/rl/people/liwb/index.htm), [Jinglin Xu], [Jing Huo], [Lei Wang], [Yang Gao] and Jiebo Luo. In AAAI 2019. 
+If you use this code for your research, please cite: <br>
+Distribution Consistency based Covariance Metric Networks for Few-shot Learning. [Wenbin Li](https://cs.nju.edu.cn/rl/people/liwb/index.htm), Jinglin Xu, Jing Huo, Lei Wang, Yang Gao and Jiebo Luo. In AAAI 2019. 
+<img src='imgs/CovaMNet.bmp' align="center" width=500>
 
 
 ## Prerequisites
