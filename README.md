@@ -4,7 +4,8 @@ We provide PyTorch implementation of CovaMNet for few-shot learning. The code wa
 
 If you use this code for your research, please cite: 
 
-Distribution Consistency based Covariance Metric Networks for Few-shot Learning. [Wenbin Li](https://cs.nju.edu.cn/rl/people/liwb/index.htm), Jinglin Xu, Jing Huo, Lei Wang, Yang Gao and Jiebo Luo. In AAAI 2019.<br> 
+[Distribution Consistency based Covariance Metric Networks for Few-shot Learning]().<br> 
+[Wenbin Li](https://cs.nju.edu.cn/rl/people/liwb/index.htm), Jinglin Xu, Jing Huo, Lei Wang, Yang Gao and Jiebo Luo. In AAAI 2019.<br> 
 <img src='imgs/CovaMNet.bmp' align="center" width=500>
 
 
@@ -26,11 +27,11 @@ cd CovaMNet_Fewshot
 - Install [PyTorch](http://pytorch.org) 0.4 and other dependencies (e.g., torchvision).
 
 ### Datasets
-- [miniImageNet](https://drive.google.com/file/d/1fUBrpv8iutYwdL4xE1rX_R9ef6tyncX9/view). Thanks [Victor Garcia](https://github.com/vgsatorras/few-shot-gnn) for providing this dataset. 
+- [miniImageNet](https://drive.google.com/file/d/1fUBrpv8iutYwdL4xE1rX_R9ef6tyncX9/view). 
 - [StanfordDog](http://vision.stanford.edu/aditya86/ImageNetDogs/).
 - [StanfordCar](https://ai.stanford.edu/~jkrause/cars/car_dataset.html).
-- [CUB-200](http://www.vision.caltech.edu/visipedia/CUB-200.html). In our paper, we just used the CUB-200 dataset. In fact, there is a newer revision of this dataset with more images, see [Caltech-UCSD Birds-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html).
-- Download a dataset (e.g., miniImageNet). Note, if you use these datasets, please cite the corresponding papers. 
+- [CUB-200](http://www.vision.caltech.edu/visipedia/CUB-200.html). 
+Thanks [Victor Garcia](https://github.com/vgsatorras/few-shot-gnn) for providing the miniImageNet dataset. In our paper, we just used the CUB-200 dataset. In fact, there is a newer revision of this dataset with more images, see [Caltech-UCSD Birds-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html). Note, if you use these datasets, please cite the corresponding papers. 
 
 
 ###  miniImageNet Few-shot Classification
