@@ -4,7 +4,7 @@ We provide PyTorch implementation of CovaMNet for few-shot learning. The code wa
 
 If you use this code for your research, please cite: 
 
-[Distribution Consistency based Covariance Metric Networks for Few-shot Learning]().<br> 
+[Distribution Consistency based Covariance Metric Networks for Few-shot Learning](https://cs.nju.edu.cn/rl/people/liwb/AAAI19.pdf).<br> 
 [Wenbin Li](https://cs.nju.edu.cn/rl/people/liwb/index.htm), Jinglin Xu, Jing Huo, Lei Wang, Yang Gao and Jiebo Luo. In AAAI 2019.<br> 
 <img src='imgs/CovaMNet.bmp' align="center" width=500>
 
@@ -13,7 +13,7 @@ If you use this code for your research, please cite:
 - Linux
 - Python 3
 - Pytorch 0.4
-- CPU or NVIDIA GPU + CUDA CuDNN
+- GPU + CUDA CuDNN
 
 ## Getting Started
 ### Installation
@@ -30,7 +30,7 @@ cd CovaMNet_Fewshot
 - [miniImageNet](https://drive.google.com/file/d/1fUBrpv8iutYwdL4xE1rX_R9ef6tyncX9/view). 
 - [StanfordDog](http://vision.stanford.edu/aditya86/ImageNetDogs/).
 - [StanfordCar](https://ai.stanford.edu/~jkrause/cars/car_dataset.html).
-- [CUB-200](http://www.vision.caltech.edu/visipedia/CUB-200.html). 
+- [CUB-200](http://www.vision.caltech.edu/visipedia/CUB-200.html). <br>
 Thanks [Victor Garcia](https://github.com/vgsatorras/few-shot-gnn) for providing the miniImageNet dataset. In our paper, we just used the CUB-200 dataset. In fact, there is a newer revision of this dataset with more images, see [Caltech-UCSD Birds-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html). Note, if you use these datasets, please cite the corresponding papers. 
 
 
@@ -43,7 +43,6 @@ python CovaMNet_Train_5way1shot.py --dataset_dir ./datasets/miniImageNet --data_
 ```bash
 python CovaMNet_Test_5way1shot.py --resume ./results/CovaMNet_miniImageNet_Conv64_5_Way_1_Shot/model_best.pth.tar
 ```
-- The test results will be saved to a html file here: `./results/CovaMNet_miniImageNet_Conv64_5_Way_1_Shot`.
 - The results on the miniImageNet dataset: 
 <img src='imgs/results_miniImageNet.bmp' align="center" width=800>
 
@@ -64,7 +63,6 @@ python CovaMNet_Train_5way1shot.py --dataset_dir ./datasets/StanfordDog --data_n
 ```bash
 python CovaMNet_Test_5way1shot.py --resume ./results/CovaMNet_StanfordDog_Conv64_5_Way_1_Shot/model_best.pth.tar
 ```
-- The test results will be saved to a html file here: `./results/CovaMNet_StanfordDog_Conv64_5_Way_1_Shot`.
 - The results on the fine-grained datasets: 
 <img src='imgs/results_finegrained.bmp' align="center" width=800>
 
