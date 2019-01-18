@@ -39,7 +39,7 @@ Thanks [Victor Garcia](https://github.com/vgsatorras/few-shot-gnn) for providing
 ```bash
 python CovaMNet_Train_5way1shot.py --dataset_dir ./datasets/miniImageNet --data_name miniImageNet
 ```
-- Test the model:
+- Test the model (specify the dataset_dir and data_name first):
 ```bash
 python CovaMNet_Test_5way1shot.py --resume ./results/CovaMNet_miniImageNet_Conv64_5_Way_1_Shot/model_best.pth.tar
 ```
@@ -59,7 +59,7 @@ python ./dataset/StanfordDog/StanfordDog_prepare_csv.py
 ```bash
 python CovaMNet_Train_5way1shot.py --dataset_dir ./datasets/StanfordDog --data_name StanfordDog
 ```
-- Test the model:
+- Test the model (specify the dataset_dir and data_name first):
 ```bash
 python CovaMNet_Test_5way1shot.py --resume ./results/CovaMNet_StanfordDog_Conv64_5_Way_1_Shot/model_best.pth.tar
 ```
