@@ -64,7 +64,7 @@ python CovaMNet_Train_5way1shot.py --dataset_dir ./datasets/StanfordDog --data_n
 python CovaMNet_Test_5way1shot.py --resume ./results/CovaMNet_StanfordDog_Conv64_5_Way_1_Shot/model_best.pth.tar
 ```
 - The results on the fine-grained datasets: 
-<img src='imgs/results_finegrained.bmp' align="center" width=800>
+<img src='imgs/result_finegrained.bmp' align="center" width=800>
 
 
 
