@@ -6,7 +6,7 @@ If you use this code for your research, please cite:
 
 [Distribution Consistency based Covariance Metric Networks for Few-shot Learning](https://cs.nju.edu.cn/rl/people/liwb/AAAI19.pdf).<br> 
 [Wenbin Li](https://cs.nju.edu.cn/rl/people/liwb/index.htm), Jinglin Xu, Jing Huo, Lei Wang, Yang Gao and Jiebo Luo. In AAAI 2019.<br> 
-<div align=center><img src='imgs/CovaMNet.bmp' width=500>
+<img src='imgs/CovaMNet.bmp' align=center width=500>
 
 
 ## Prerequisites
