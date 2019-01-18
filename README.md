@@ -21,7 +21,7 @@ If you use this code for your research, please cite:
 - Clone this repo:
 ```bash
 git clone https://github.com/WenbinLee/CovaMNet
-cd CovaMNet_Fewshot
+cd CovaMNet
 ```
 
 - Install [PyTorch](http://pytorch.org) 0.4 and other dependencies (e.g., torchvision).
