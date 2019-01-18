@@ -6,7 +6,7 @@ If you use this code for your research, please cite:
 
 [Distribution Consistency based Covariance Metric Networks for Few-shot Learning](https://cs.nju.edu.cn/rl/people/liwb/AAAI19.pdf).<br> 
 [Wenbin Li](https://cs.nju.edu.cn/rl/people/liwb/index.htm), Jinglin Xu, Jing Huo, Lei Wang, Yang Gao and Jiebo Luo. In AAAI 2019.<br> 
-<img src='imgs/CovaMNet.bmp' align=center width=500>
+<img src='imgs/CovaMNet.bmp' width=500/>
 
 
 ## Prerequisites
@@ -69,7 +69,7 @@ python CovaMNet_Test_5way1shot.py --resume ./results/CovaMNet_StanfordDog_Conv64
 
 
 ## Citation
-If you use this code for your research, please cite our papers.
+If you use this code for your research, please cite our paper.
 ```
 @inproceedings{li2019CovaMNet,
   title={Distribution Consistency based Covariance Metric Networks for Few-shot Learning},
