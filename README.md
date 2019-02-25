@@ -73,7 +73,7 @@ If you use this code for your research, please cite our paper.
 ```
 @inproceedings{li2019CovaMNet,
   title={Distribution Consistency based Covariance Metric Networks for Few-shot Learning},
-  author={Wenbin Li, Jinglin Xu, Jing Huo, Lei Wang, Yang Gao and Jiebo Luo},
+  author={Li, Wenbin and Xu, Jinglin and Huo, Jing and Wang, Lei and Gao Yang and Luo, Jiebo},
   booktitle={AAAI},
   year={2019}
 }
