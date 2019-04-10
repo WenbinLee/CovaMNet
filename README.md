@@ -1,6 +1,6 @@
 # CovaMNet in PyTorch
 
-We provide PyTorch implementation of CovaMNet for few-shot learning. The code was written by [Wenbin Li](https://github.com/WenbinLee)<a href="https://cs.nju.edu.cn/rl/people/liwb/index.htm"> [Homepage]</a>.<br>
+We provide a PyTorch implementation of CovaMNet for few-shot learning. The code was written by [Wenbin Li](https://github.com/WenbinLee)<a href="https://cs.nju.edu.cn/rl/people/liwb/index.htm"> [Homepage]</a>.<br>
 
 If you use this code for your research, please cite: 
 
