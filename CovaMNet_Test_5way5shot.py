@@ -237,14 +237,13 @@ def accuracy(output, target, topk=(1,)):
 			res.append(correct_k.mul_(100.0 / batch_size))
 		return res
 
-
+	
 def mean_confidence_interval(data, confidence=0.95):
-	a = 1.0*np.array(data)
+	a = [1.0*np.array(data[i].cpu()) for i in range(len(data))]
 	n = len(a)
 	m, se = np.mean(a), scipy.stats.sem(a)
 	h = se * sp.stats.t._ppf((1+confidence)/2., n-1)
 	return m,h
-
 
 
 # ============================================ Testing phase ========================================
