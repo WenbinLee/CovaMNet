@@ -8,8 +8,8 @@ import random
 from PIL import Image
 import pdb
 import csv
-import pickle
-#torch.multiprocessing.set_sharing_strategy('file_system')
+
+
 
 def pil_loader(path):
 	# open path as file to avoid ResourceWarning (https://github.com/python-pillow/Pillow/issues/835)
@@ -49,13 +49,11 @@ def find_classes(dir):
 		return classes, class_to_idx
 
 
-
-
 class Imagefolder_csv(object):
 	"""
 	   Imagefolder for miniImageNet--ravi, StanfordDog, StanfordCar and CubBird datasets.
 	   Images are stored in the folder of "images";
-	   Indexes are stored in the Csv files.
+	   Indexes are stored in the CSV files.
 	"""
 
 	def __init__(self, data_dir="", mode="train", image_size=84, data_name="miniImageNet",
@@ -75,64 +73,54 @@ class Imagefolder_csv(object):
 		e = 0
 		if mode == "train":
 
-			if path.isfile('./dataset/'+str(data_name)+'/train_'+str(way_num)+'way'+str(shot_num)+'shot'+str(episode_num)+'.pkl'):
-				f_train = open('./dataset/'+str(data_name)+'/train_'+str(way_num)+'way'+str(shot_num)+'shot'+str(episode_num)+'.pkl','rb')
-				data_list = pickle.load(f_train)
-				f_train.close()
-			else:
-				# store all the classes and images into a dict
-				class_img_dict = {}
-				with open(train_csv) as f_csv:
-					f_train = csv.reader(f_csv, delimiter=',')
-					for row in f_train:
-						if f_train.line_num == 1:
-							continue
-						img_name, img_class = row
+			# store all the classes and images into a dict
+			class_img_dict = {}
+			with open(train_csv) as f_csv:
+				f_train = csv.reader(f_csv, delimiter=',')
+				for row in f_train:
+					if f_train.line_num == 1:
+						continue
+					img_name, img_class = row
 
-						if img_class in class_img_dict:
-							class_img_dict[img_class].append(img_name)
-						else:
-							class_img_dict[img_class]=[]
-							class_img_dict[img_class].append(img_name)
-				f_csv.close()
-				class_list = class_img_dict.keys()
+					if img_class in class_img_dict:
+						class_img_dict[img_class].append(img_name)
+					else:
+						class_img_dict[img_class]=[]
+						class_img_dict[img_class].append(img_name)
+			f_csv.close()
+			class_list = class_img_dict.keys()
 
 
-				while e < episode_num:
+			while e < episode_num:
 
-					# construct each episode
-					episode = []
-					e += 1
-					temp_list = random.sample(class_list, way_num)
-					label_num = -1 
+				# construct each episode
+				episode = []
+				e += 1
+				temp_list = random.sample(class_list, way_num)
+				label_num = -1 
 
-					for item in temp_list:
-						label_num += 1
-						imgs_set = class_img_dict[item]
-						support_imgs = random.sample(imgs_set, shot_num)
-						query_imgs = [val for val in imgs_set if val not in support_imgs]
+				for item in temp_list:
+					label_num += 1
+					imgs_set = class_img_dict[item]
+					support_imgs = random.sample(imgs_set, shot_num)
+					query_imgs = [val for val in imgs_set if val not in support_imgs]
 
-						if query_num < len(query_imgs):
-							query_imgs = random.sample(query_imgs, query_num)
-
-
-						# the dir of support set
-						query_dir = [path.join(data_dir, 'images', i) for i in query_imgs]
-						support_dir = [path.join(data_dir, 'images', i) for i in support_imgs]
+					if query_num < len(query_imgs):
+						query_imgs = random.sample(query_imgs, query_num)
 
 
-						data_files = {
-							"query_img": query_dir,
-							"support_set": support_dir,
-							"target": label_num
-						}
-						episode.append(data_files)
-					data_list.append(episode)
+					# the dir of support set
+					query_dir = [path.join(data_dir, 'images', i) for i in query_imgs]
+					support_dir = [path.join(data_dir, 'images', i) for i in support_imgs]
 
-				# Save the data_list as .pkl file
-				output_file = open('./dataset/'+str(data_name)+'/train_'+str(way_num)+'way'+str(shot_num)+'shot'+str(episode_num)+'.pkl', 'wb')
-				pickle.dump(data_list, output_file)
-				output_file.close()
+
+					data_files = {
+						"query_img": query_dir,
+						"support_set": support_dir,
+						"target": label_num
+					}
+					episode.append(data_files)
+				data_list.append(episode)
 
 			
 		elif mode == "val":
@@ -295,7 +283,7 @@ class Imagefolder_csv(object):
 			support_targets.extend(np.tile(target, len(support_dir)))
 
 		# Shuffle the query images 
-		rand_num = torch.rand(1)
-		random.Random(rand_num).shuffle(query_images)
-		random.Random(rand_num).shuffle(query_targets)           
+		# rand_num = torch.rand(1)
+		# random.Random(rand_num).shuffle(query_images)
+		# random.Random(rand_num).shuffle(query_targets)           
 		return (query_images, query_targets, support_images, support_targets)
