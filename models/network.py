@@ -229,8 +229,8 @@ class CovaBlock(nn.Module):
 		for i in range(B):
 			query_sam = input[i]
 			query_sam = query_sam.view(C, -1)
-			mean_query = torch.mean(query_sam, 1, True)
-			query_sam = query_sam-mean_query
+			query_sam_norm = torch.norm(query_sam, 2, 1, True)    
+			query_sam = query_sam/query_sam_norm
 
 			if torch.cuda.is_available():
 				mea_sim = torch.zeros(1, len(CovaMatrix_list)*h*w).cuda()
@@ -251,8 +251,3 @@ class CovaBlock(nn.Module):
 		Cova_Sim = self.cal_similarity(x1, CovaMatrix_list)
 
 		return Cova_Sim
-
-
-
-
-
