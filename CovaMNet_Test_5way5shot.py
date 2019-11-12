@@ -37,6 +37,8 @@ from torch import autograd
 from PIL import ImageFile
 import scipy as sp
 import scipy.stats
+import sys
+sys.dont_write_bytecode = True
 
 
 
