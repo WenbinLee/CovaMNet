@@ -3,6 +3,8 @@ import torch.nn as nn
 from torch.nn import init
 import functools
 import pdb
+import sys
+sys.dont_write_bytecode = True
 
 ''' 
 	
